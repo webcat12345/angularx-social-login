@@ -9414,6 +9414,7 @@
                         var /** @type {?} */ profile = _this.auth2.currentUser.get().getBasicProfile();
                         var /** @type {?} */ token = _this.auth2.currentUser.get().getAuthResponse(true).access_token;
                         var /** @type {?} */ backendToken = _this.auth2.currentUser.get().getAuthResponse(true).id_token;
+                        var /** @type {?} */ refreshToken = _this.auth2.currentUser.get().getAuthResponse(true).refresh_token;
                         user.id = profile.getId();
                         user.name = profile.getName();
                         user.email = profile.getEmail();
@@ -9422,6 +9423,7 @@
                         user.lastName = profile.getFamilyName();
                         user.authToken = token;
                         user.idToken = backendToken;
+                        user.refreshToken = refreshToken;
                         resolve(user);
                     }
                 });

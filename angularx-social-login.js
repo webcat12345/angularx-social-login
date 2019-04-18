@@ -9343,6 +9343,7 @@ class GoogleLoginProvider extends BaseLoginProvider {
                     let /** @type {?} */ profile = this.auth2.currentUser.get().getBasicProfile();
                     let /** @type {?} */ token = this.auth2.currentUser.get().getAuthResponse(true).access_token;
                     let /** @type {?} */ backendToken = this.auth2.currentUser.get().getAuthResponse(true).id_token;
+                    let /** @type {?} */ refreshToken = this.auth2.currentUser.get().getAuthResponse(true).refresh_token;
                     user.id = profile.getId();
                     user.name = profile.getName();
                     user.email = profile.getEmail();
@@ -9351,6 +9352,7 @@ class GoogleLoginProvider extends BaseLoginProvider {
                     user.lastName = profile.getFamilyName();
                     user.authToken = token;
                     user.idToken = backendToken;
+                    user.refreshToken = refreshToken;
                     resolve(user);
                 }
             });
