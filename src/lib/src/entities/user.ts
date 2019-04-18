@@ -9,7 +9,7 @@ export class SocialUser {
   authToken: string;
   idToken: string; // Reference https://developers.google.com/identity/sign-in/web/backend-auth
   authorizationCode: string; // Reference https://developers.google.com/identity/sign-in/web/reference#googleauthgrantofflineaccessoptions
-  refreshToken?: string;
+  refreshToken: string;
 
   /**
    * Contains the entire object returned from the Facebook API based on the fields you requested.
